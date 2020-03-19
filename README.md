@@ -6,6 +6,7 @@ Web application developed on ASP.NET core 3.1 technology containing online form 
 * Ubuntu 18.04.3 (LTS) x64 (We tested on this version)
 * Docker
 * Docker Compose
+* Azure Data Studio or SQL Server Management Studio (or any which can be manipulate data)
 ### Windows Server
 * Visual Studio 2019 Community Edition or Visual Studio Code (or any which can build .NET core)
 * SQL Server 2017 Express Edition
