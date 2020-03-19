@@ -1,0 +1,117 @@
+﻿@using Covid19
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Covid-19</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/covid.min.css" />
+
+    <link rel="stylesheet" type="text/css" href="~/lib/datatables/datatables.min.css" />
+    <link rel="stylesheet" type="text/css" href="~/lib/bootstrap-datepicker/css/bootstrap-datepicker3.css" />
+    <link rel="stylesheet" type="text/css" href="~/lib/font-awesome/css/font-awesome.min.css" />
+
+    @*<link href="~/Content/bootstrap-datetimepicker.min.css" rel="stylesheet" />*@
+    @if (IsSectionDefined("CustomStyles"))
+    {
+        @RenderSection("CustomStyles", required: false)
+    }
+
+    <link rel="stylesheet" type="text/css" href="~/css/Geo9/custom.css" />
+
+    <style>
+        body {
+            padding: 0px;
+            background: #E1E0FF;
+            background-image:url(@Url.Content("~/images/covid-bg.png")); background-size:cover; background-position: center
+        }
+
+        .navbar-inverse .navbar-nav > li > a {
+            color: #fff;
+        }
+        h1{
+            font-size:7rem;
+        }
+
+        .row{
+            margin:0
+        }
+        .top-bg {
+            background-image: url( @Url.Content("~/images/virus.png") );
+            background-position: right;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 100%;
+            padding: 10px 30px 10px 30px;
+            color: #fff;
+        }
+
+        .title {
+            background: #FFAF10;
+            padding: 20px;
+            border-radius: 50px;
+            color: #fff;
+            display: inline-block;
+        }
+
+        .container-fluid{
+            padding-top:20px
+        }
+
+    </style>
+</head>
+<body>
+    <div class="row" style="background:#656392; background-image:url(@Url.Content("~/images/covid-bg.png")); background-size:cover; background-position: center">
+        <div class="col-xs-12 top-bg">
+            <h1 class="hidden-xs" style="display:inline"><b>CORONAVIRUS</b> </h1>
+            <h1 class="visible-xs" style="display:inline; font-size:40px"><b>CORONAVIRUS</b> </h1>
+            <h2 style="color:#FFAF10; display:inline">2019-nCov</h2>
+            @*<p>พัฒนาโดย Geonine Software Co.,Ltd.</p>
+        <img src="~/images/logo.png" width="80" />*@
+        </div>
+    </div>
+
+
+    @*<div class="row top-bg" style="background:#1d374a; background-image:url(@Url.Content("~/images/covid-bg.png")); background-size:cover">
+            <div class="col-sm-3 text-center">
+                <img src="~/images/geo9logo.png" style="width:120px;" />
+            </div>
+            <div class="col-md-6 text-center">
+                <h2><b>แบบรายงานสุขภาพ (เฝ้าระวัง COVID-19)</b></h2>
+                <p>พัฒนาโดย Geonine Software Co.,Ltd.</p>
+            </div>
+        </div>*@
+
+
+    <div class="container-fluid body-content">
+        @RenderBody()
+        <hr />
+        <footer class="text-center">
+            <p>พัฒนาโดย Geonine Software Co.,Ltd.</p>
+            <img src="~/images/logo.png" width="80" />
+        </footer>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="~/lib/bootbox/bootbox.min.js"></script>
+    <script src="~/lib/select2/dist/js/select2.min.js"></script>
+    <script src="~/lib/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+    <script src="~/lib/bootstrap-datepicker/js/bootstrap-datepicker.th.js"></script>
+    <script src="~/js/jquery-validation.min.js"></script>
+    <script src="~/lib/datatables/datatables.min.js"></script>
+    <partial name="_JavaScriptCoreFunction.cshtml" />
+    <script src="~/js/core.min.js"></script>
+
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+    <script type="text/javascript">
+        $(function () {
+            $('.col-form-label.require').append(" <i class='fa fa-asterisk'></i>");
+
+        })
+
+    </script>
+</body>
+</html>
