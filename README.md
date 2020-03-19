@@ -12,5 +12,6 @@ Web application developed on ASP.NET core 3.1 technology containing online form 
    1. **create_database.sql** -> Database name **[covid19_db]** will be created in your SQL Server
    1. **create_table.sql** -> Tables and Stored Procedures will be created in your **[covid19_db]**
    1. **lut_data.sql** -> Necessary lookup data will be inserted into tables
+1. Adjust connection string to point to your database server by editing **Covid19\appsettings.json** (Or any environment settings you desire)
 1. Publish web application using your prefered tools (We recommend Visual Studio 2019 Community Edition latest version for your convenient)
 1. Copy published application to your designated web server
